@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Predictions</title>
+  </head>
+  <body
+    class="w-screen min-h-screen flex flex-col justify-center items-center bg-sky-200"
+  >
+    <div id="h-full flex flex-col justify-center items-center">
+      <div class="w-full text-2xl text-center font-bold my-10">
+        Prediction Results
+      </div>
+      <div class="flex flex-col">
+        <div class="mb-10">
+          <div class="font-bold mb-2 text-center">Original Image</div>
+          <img class="h-[400px]" src="/static/org.png" />
+        </div>
+        <div class="mb-10">
+          <div class="font-bold mb-2 text-center">
+            Black and White Predicted Image
+          </div>
+          <img class="h-[400px]" src="/static/outputResult.png" />
+        </div>
+        <div>
+          <div class="font-bold mb-2 text-center">
+            Overlapped Predicted Image
+          </div>
+          <img class="h-[400px]" src="/static/outputOverlapped.png" />
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center mb-10">
+        <form action="/back" method="POST" enctype="multipart/form-data">
+          <button
+            type="submit"
+            class="py-2 px-4 bg-violet-600 text-white text-center rounded-lg font-bold mt-10"
+          >
+            Go Back
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
